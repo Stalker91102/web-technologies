@@ -1,0 +1,97 @@
+<!DOCTYPE HTML 5>
+<html>
+    
+    
+    <header>    
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <title>Регистрация участников</title>
+        <link rel="stylesheet" href="style.css">
+    </header>
+
+    <body>
+        <div class="background">
+            <div class="forma">    
+                <form method="post" action="record_BD.php">
+                    <div class="name">
+                        <p>
+                            <label for="name">Имя</label>
+                            <input type="text" name="name" required>
+                        </p>
+                        
+                    </div>
+                    <div class="otch">
+                        <p>
+                            <label for="otch">Отчество</label>
+                            <input type="text" name="otch">
+                        </p>
+                        
+                    </div>
+                    <div class="familia">
+                        <p>
+                            <label for="familia">Фамилия</label>
+                            <input type="text" name="familia" required>
+                        </p>
+                        
+                    </div>
+                    <div class="datebo">
+                        <p> 
+                            <label for="datebo">Дата рождения</label>
+                            <input type="date" name="datebo" required>
+                        </p>
+                        
+                    </div>
+                    <div class="email">
+                        <p>
+                            <label for="email">e-mail</label>
+                            <input type="email" name="email">
+                        </p>
+                        
+                    </div>
+                    <div class="phone">
+                        <p>
+                            <label for="phone">phone</label>
+                            <input type="phone" name="phone">                            
+                        </p>
+                        
+                    </div>
+                    <div class="secdoc">
+                        <p>
+                            <label for="secdoc">секция конференции</label>
+                            <select name="secdoc">
+                            <option>Выберите секцию конференции</option>
+                            <option value="Математика">Математика</option> 
+                            <option value="Физика">Физика</option> 
+                            <option value="Информатика">Информатика</option> 
+                            </select> 
+                            <div class="select-arrow"></div>                             
+                        </p>
+                        
+                    </div>
+                    <div class="checkbox">
+                        <p>
+                            <label for="checkbox">Есть доклад?</label>
+                            <input type="checkbox" onclick="if(this.checked){document.getElementById('temadoc').style.display='inline-block'}else {document.getElementById('temadoc').style.display='none';  document.getElementById('temadoc').value='';}">
+                            <input type="text" name="temadoc" style="display: none;" id="temadoc">
+                         
+                        </p>
+                        
+                    </div>
+                    <!-- <div class="doclad_id">
+                        <p>
+                            <label for="doclad_id">Тема доклада</label>
+                            <input type="текст" name="temadoc" >                            
+                        </p>                        
+                    </div>              --> 
+                    <button type="submit">Зарегистрироват участника</button>
+                    <button type="button" onclick = "document.location ='tablebd.php'">Посмотреть участников</button>
+                </form> 
+            </div>
+        </div>
+    
+    </body>
+
+    <footer>
+
+    </footer>
+
+</html>     
